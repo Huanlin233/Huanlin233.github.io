@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>我的第一篇博客 |  Hexo</title>
+      <title>My-First-Plugin |  Hexo</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,7 +53,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-我的第一篇博客"
+  id="post-My-First-Plugin"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -64,7 +64,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  我的第一篇博客
+  My-First-Plugin
 </h1>
  
 
@@ -72,15 +72,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/02/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
-  <time datetime="2022-02-26T12:18:02.000Z" itemprop="datePublished">2022-02-26</time>
+      <a href="/2022/03/19/My-First-Plugin/" class="article-date">
+  <time datetime="2022-03-19T10:05:32.000Z" itemprop="datePublished">2022-03-19</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">2</span>
+            <span class="post-count">488</span>
         </span>
     </span>
 
@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> Reading time≈</span>
-            <span class="post-count">1 min</span>
+            <span class="post-count">2 min</span>
         </span>
     </span>
 </div>
@@ -104,7 +104,44 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="Hello-world"><a href="#Hello-world" class="headerlink" title="Hello, world"></a>Hello, world</h1> 
+  <h1 id="My-First-Plugin"><a href="#My-First-Plugin" class="headerlink" title="My First Plugin"></a><center>My First Plugin</center></h1><h2 id="内容介绍-主要功能"><a href="#内容介绍-主要功能" class="headerlink" title="内容介绍 主要功能"></a>内容介绍 主要功能</h2><ol>
+<li>简单的抽签功能<ul>
+<li>( 其实只是个随机数 )</li>
+</ul>
+</li>
+<li>登录功能<ul>
+<li>注册</li>
+<li>登录</li>
+<li>登录前的限制</li>
+<li>OP 权限处理 (TODO)</li>
+</ul>
+</li>
+<li>随机传送功能<ul>
+<li>随机数抽取目标点</li>
+<li>检测目标点是否安全</li>
+<li>单次搜索数量限制</li>
+</ul>
+</li>
+</ol>
+<h2 id="内容介绍-辅助功能"><a href="#内容介绍-辅助功能" class="headerlink" title="内容介绍 辅助功能"></a>内容介绍 辅助功能</h2><ol>
+<li>文件读写功能<ul>
+<li>记录随机传送目标点和玩家名</li>
+<li>( 方便debug )</li>
+</ul>
+</li>
+<li>YAML配置读写功能<ul>
+<li>存储账号密码</li>
+<li>检测密码正误</li>
+<li>检测是否注册</li>
+<li>( 数据库存储 ) (TODO)</li>
+</ul>
+</li>
+<li>Listener事件检测<ul>
+<li>登录前取消各事件以实现限制行为的效果</li>
+</ul>
+</li>
+</ol>
+<h2 id="Main-Class-Code"><a href="#Main-Class-Code" class="headerlink" title="Main Class Code"></a>Main Class Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> huanlin.helloworld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.plugin.java.JavaPlugin;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.Bukkit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> <span class="keyword">extends</span> <span class="title class_">JavaPlugin</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> JavaPlugin instance;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> FileWriter fw;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">HelloWorld</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onEnable</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">file1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;E:/RTP&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            deletefile(file1.getPath());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        file1.mkdirs();</span><br><span class="line">        <span class="type">File</span> <span class="variable">file2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;E:/RTP&quot;</span>, <span class="string">&quot;list.txt&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            file2.createNewFile();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            fw = <span class="keyword">new</span> <span class="title class_">FileWriter</span>(file2);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        getLogger().info(<span class="string">&quot;Hello, world!&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (Bukkit.getPluginCommand(<span class="string">&quot;randomtp&quot;</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">            Bukkit.getPluginCommand(<span class="string">&quot;randomtp&quot;</span>).setExecutor(<span class="keyword">new</span> <span class="title class_">RandomTP</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (Bukkit.getPluginCommand(<span class="string">&quot;chouqian&quot;</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">            Bukkit.getPluginCommand(<span class="string">&quot;chouqian&quot;</span>).setExecutor(<span class="keyword">new</span> <span class="title class_">Chouqian</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (Bukkit.getPluginCommand(<span class="string">&quot;rolltp&quot;</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">            Bukkit.getPluginCommand(<span class="string">&quot;rolltp&quot;</span>).setExecutor(<span class="keyword">new</span> <span class="title class_">RollTP</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(Bukkit.getPluginCommand(<span class="string">&quot;login&quot;</span>) != <span class="literal">null</span>) &#123;</span><br><span class="line">            Bukkit.getPluginCommand(<span class="string">&quot;login&quot;</span>).setExecutor(<span class="keyword">new</span> <span class="title class_">LoginCommand</span>());</span><br><span class="line">        &#125;</span><br><span class="line">        Bukkit.getPluginManager().registerEvents(<span class="keyword">new</span> <span class="title class_">Eventlistener</span>(), <span class="built_in">this</span>);</span><br><span class="line">        Bukkit.getPluginManager().registerEvents(<span class="keyword">new</span> <span class="title class_">Login</span>(), <span class="built_in">this</span>);</span><br><span class="line">        instance = <span class="built_in">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onLoad</span><span class="params">()</span> &#123;</span><br><span class="line">        saveDefaultConfig();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onDisable</span><span class="params">()</span> &#123;</span><br><span class="line">        saveConfig();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">deletefile</span><span class="params">(String delpath)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">File</span> <span class="variable">file</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(delpath);</span><br><span class="line">        <span class="keyword">if</span> (file.isDirectory()) &#123;</span><br><span class="line">            String[] filelist = file.list();</span><br><span class="line">            <span class="keyword">for</span> (String delFile : filelist) &#123;</span><br><span class="line">                <span class="type">File</span> <span class="variable">delfile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(delpath + File.separator + delFile);</span><br><span class="line">                <span class="keyword">if</span> (delfile.isDirectory()) &#123;</span><br><span class="line">                    deletefile(delpath + File.separator + delFile);</span><br><span class="line">                &#125; <span class="keyword">else</span></span><br><span class="line">                    System.out.println(<span class="string">&quot;正在删除文件：&quot;</span> + delfile.getPath() + <span class="string">&quot;,删除是否成功：&quot;</span> + delfile.delete());</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;正在删除空文件夹：&quot;</span> + file.getPath() + <span class="string">&quot;,删除是否成功：&quot;</span> + file.delete());</span><br><span class="line">        &#125; <span class="keyword">else</span></span><br><span class="line">            System.out.println(<span class="string">&quot;正在删除文件：&quot;</span> + file.getPath() + <span class="string">&quot;,删除是否成功：&quot;</span> + file.delete());</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -174,7 +211,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/02/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/03/19/My-First-Plugin/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -185,19 +222,10 @@
    
   <nav class="article-nav">
     
-      <a href="/2022/03/19/My-First-Plugin/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            My-First-Plugin
-          
-        </div>
-      </a>
     
-    
-      <a href="/2022/02/26/hello-world/" class="article-nav-link">
+      <a href="/2022/02/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
+        <div class="article-nav-title">我的第一篇博客</div>
       </a>
     
   </nav>
